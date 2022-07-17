@@ -11,6 +11,6 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "app": "node scripts/app.js",
-    "export": "node scripts/export.js && npx doc"
+    "export": "node scripts/export.js"
   }
 }
