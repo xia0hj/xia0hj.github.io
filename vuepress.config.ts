@@ -2,9 +2,11 @@ import { defaultTheme, defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  title: '你好， VuePress ！',
+  title: 'xia0hj 的个人空间',
   description: '这是我的第一个 VuePress 站点',
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   theme: defaultTheme({
+    logo: '/avatars.jpg',
     navbar: [
       { text: 'Home', link: '/' },
       { text: '面试', link: '/interview/' },
