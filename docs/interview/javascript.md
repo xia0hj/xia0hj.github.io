@@ -4,7 +4,7 @@
 
 ## 1. js 的数据类型
 
-1. 基本数据类型有 String、Number、Boolean、Undefined、Null，还有 es6 新增的 Symbol，<font color="orange">参考 2</font>。
+1. 基本数据类型有 String、Number、Boolean、Undefined、Null，还有 es6 新增的 Symbol，<span style="color:orange">参考 2</span>。
 2. 引用类型有对象、数组、函数 3 种。
 3. 区别是存储位置不同：
    1. 基本数据类型直接存储在栈中的简单数据段，因为它占据空间小，而且会频繁使用。
@@ -24,14 +24,14 @@
    2. const、let 存在暂时性死区，等到声明那一行代码出现后才能使用该变量，且不能重复声明
    3. const、let 支持大括号包起来的块级作用域，var 只能借助函数包起来
 2. 模板字符串：用反引号，里面可以用 $\{ \} 放 js 表达式，会将返回值放到字符串中，并且会保留换行和空格
-3. 剩余参数：在参数前面加 3 个点表示，只能放在最后面，把剩余没有对应形参的参数放到一个数组中，<font color="orange">参考 17</font>
+3. 剩余参数：在参数前面加 3 个点表示，只能放在最后面，把剩余没有对应形参的参数放到一个数组中，<span style="color:orange">参考 17</span>
 4. Set 和 Map
-5. 箭头函数：普通函数的 this 是可变的，而箭头函数没有自己的 this，在箭头函数中使用 this 实际是上一层作用域中的 this，<font color="orange">参考 6</font>。
+5. 箭头函数：普通函数的 this 是可变的，而箭头函数没有自己的 this，在箭头函数中使用 this 实际是上一层作用域中的 this，<span style="color:orange">参考 6</span>。
 6. Generator 函数：支持暂停分段执行的函数，在 function 和函数名中间加一个星号，在函数体里面用 yield 将函数分段，调用该函数返回一个控制器，每次调用 next() 方法都会执行到 yield；可以用来将异步代码写成同步的形式，将异步后要执行的代码放在下一个分段，在异步任务中调用 next() 去执行下一段。
-7. Promise：用来包装一个异步调用，目的是解决层层嵌套的异步回调函数，<font color="orange">参考 22</font>.
+7. Promise：用来包装一个异步调用，目的是解决层层嵌套的异步回调函数，<span style="color:orange">参考 22</span>.
 8. async / await：用来写异步代码的关键字，async 函数会将 return 值通过 Promise.resolve() 方法包装成 Promise 对象再返回；await 后跟一个 Promise 对象，那么就会阻塞后续的代码，直到 Promise resolve 之后再执行。
 9. class：生成实例时必须用 new，实例会继承类中定义的属性，类之间也能通过 extends 关键字继承
-10. 模块化：<font color="orange">参考 9</font>
+10. 模块化：<span style="color:orange">参考 9</span>
 
 ## 4. var、let、const 之间的区别
 

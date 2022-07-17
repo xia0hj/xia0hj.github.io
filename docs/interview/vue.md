@@ -106,7 +106,7 @@ props > methods > data > computed > watch
 ## 12. vue 响应式原理
 
 1. 响应式指的是数据发生改变时，视图会重新渲染，匹配最新的值。
-2. vue2 实现响应式的原理是通过 Object.defineProperty() 为每一个 data 数据进行数据劫持，会为对象的每一个属性添加 get 和 set 方法进行拦截，数组则拦截数组原型上的几个变更方法：push、pop、shift、unshift、splice、sort、reverse，<font color="orange">参考 13</font>。
+2. vue2 实现响应式的原理是通过 Object.defineProperty() 为每一个 data 数据进行数据劫持，会为对象的每一个属性添加 get 和 set 方法进行拦截，数组则拦截数组原型上的几个变更方法：push、pop、shift、unshift、splice、sort、reverse，<span style="color:orange">参考 13</span>。
 3. 当页面使用到某个属性时，会触发进行拦截的 get()函数，将对应的 watcher 放到该属性的依赖收集数组中。
 4. 当数据发生改变时，会触发进行拦截的 set() 函数，会遍历依赖收集数组，通知 watcher 进行更新。
 5. vue2 这样实现响应式存在一些问题：（1）初始化时需要遍历对象所有属性，如果对象层级较深，性能不好；（2）通知更新过程需要维护大量 dep 实例和 watcher 实例，额外占用内存较多；（3）动态新增、删除对象属性无法拦截，只能用特定 set/delete api代替；（4）不支持 Map、Set 等数据结构
@@ -125,7 +125,7 @@ props > methods > data > computed > watch
 3. capture：优先触发。事件冒泡是先子组件后父组件的顺序触发，而加上 capture 的会优先触发，例如给父组件加上 capture 会优于子组件触发。
 4. once：只触发一次
 5. self：只当在 event.target 是当前元素自身时触发处理函数，即事件不是从内部元素触发的。
-6. passive：不执行回调函数中的 preventDefault()，<font color="orange">参考 15</font>
+6. passive：不执行回调函数中的 preventDefault()，<span style="color:orange">参考 15</span>
 
 ## 15. addEventListener passive
 
@@ -254,7 +254,7 @@ app.directive('loading', loadingDirective)
 
 1. state：定义状态的初始值。
 2. getters：相当于计算属性
-3. mutation：通过 commit() 方法触发，可以直接修改  state，但只能是同步操作，原因<font color="orange">参考 29</font>。
+3. mutation：通过 commit() 方法触发，可以直接修改  state，但只能是同步操作，原因<span style="color:orange">参考 29</span>。
 4. action：通过 dispatch() 方法触发，可以在 action 中提交 mutation 去修改 state，，支持异步操作。
 
 ## 29. vuex mutation 为什么不支持异步
