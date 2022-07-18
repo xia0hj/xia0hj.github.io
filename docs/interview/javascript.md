@@ -1,5 +1,3 @@
-[[toc]]
-
 # JavaScript
 
 ## 1. js 的数据类型

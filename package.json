@@ -13,5 +13,8 @@
     "app": "node scripts/app.js",
     "export": "node scripts/export.js",
     "deploy": "bash scripts/deploy.sh"
+  },
+  "dependencies": {
+    "vuepress-plugin-right-anchor": "^2.1.0-rc.2"
   }
 }

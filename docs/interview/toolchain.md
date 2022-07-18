@@ -1,5 +1,3 @@
-[[toc]]
-
 # 前端工具链
 
 ## 1. webpack 中 loader 和 plugin 的区别

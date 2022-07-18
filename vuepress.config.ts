@@ -1,4 +1,5 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
+const { rightAnchorPlugin } = require('vuepress-plugin-right-anchor')
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -48,5 +49,10 @@ export default defineUserConfig({
         },
       ]
     }
-  })
+  }),
+  plugins: [
+    rightAnchorPlugin({
+      showDepth: 1,
+    })
+  ]
 })
