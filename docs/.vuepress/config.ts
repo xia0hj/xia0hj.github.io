@@ -1,16 +1,19 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
 const { rightAnchorPlugin } = require('vuepress-plugin-right-anchor')
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  title: 'xia0hj 的个人空间',
+  title: 'xia0hj 的个人小站',
   description: '这是我的第一个 VuePress 站点',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   theme: defaultTheme({
     logo: '/avatars.jpg',
     navbar: [
       { text: 'Home', link: '/' },
-      { text: '面试', link: '/interview/' },
+      { text: '面试笔记', link: '/interview/' },
+      { text: '日记', link: '/diary/' },
+      { text: '目标', link: '/goal/' },
       { text: 'My Github', link: 'https://github.com/xia0hj' }
     ],
     sidebar: {
@@ -53,6 +56,11 @@ export default defineUserConfig({
   plugins: [
     rightAnchorPlugin({
       showDepth: 1,
-    })
+      ignore: [
+        '/diary/',
+        '/goal/'
+      ]
+    }),
+    mdEnhancePlugin()
   ]
 })
