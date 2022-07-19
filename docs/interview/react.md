@@ -1,5 +1,3 @@
-[[toc]]
-
 # React
 
 ## 1. 常用 hook
